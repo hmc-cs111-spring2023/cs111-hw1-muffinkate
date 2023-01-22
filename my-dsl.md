@@ -1,39 +1,38 @@
 # Language
 
-_What is the name of the language? Link the name to its webpage
-(if appropriate)._
+Purl
+
+https://arxiv.org/pdf/1606.08708.pdf
 
 # Domain
 
-_Describe the language's domain in five words._
+Modular knitting patterns
 
 # Computational model
 
-_We don't yet have a great definition of the term "computational model".
-For now, try to come up with the clearest, most concise explanation of
-what happens when a program in your DSL runs._
+When Purl runs, it verifies that it is a valid knitting pattern and then creates a knitting
+pattern using standard knitting notation, as well as adding information to help the knitter
+reduce their own mistakes.
 
 # DSL-ness
 
-_Fowler writes about a spectrum of languages, from general-purpose languages to
-"purely" domain-specific. Where does the DSL you chose fall on this spectrum,
-and why?_
+I think this language lies somewhere in the middle, since the use case is very domain specific
+and uses a lot of vocabulary that is specific to knitting. However, the "grammar" uses a lot of
+concepts that are really important in general-purpose languages like loops and functions. 
 
 # Internal or external?
 
-_Is the language implemented as an internal or external DSL?
-Justify your answer._
+This is an external DSL because it has it's own syntax that gets parsed into an AST, and then into
+the HTML knitting pattern.
 
 # Host language
 
-_What language(s) was (were) used to implement the DSL?_
+I think the compiler was written in javascript, and then it uses CSS and HTML to generate the pattern and create a rudimentary IDE for the language.
 
 # Benefits
 
-_Identify one potential benefit of the DSL: how is a programmer's life made
-easier by the existence of this language?_
+It makes it easier to identify and reuse the modular elements of a knitting pattern, as well as checking the pattern to make sure that it's valid, and using knitting notation inside the language helps leverage computational thinking when creating a pattern.
 
 # Drawbacks
 
-_Identify one potential drawback of the DSL: what does a programmer
-lose by using this DSL instead of a general-purpose language?_
+It isn't as elegant as a general-purpose language because it has to adhere to a strict notation. The user can't define variables or use a notation that makes sense to them because it has to be able to be compiled.
