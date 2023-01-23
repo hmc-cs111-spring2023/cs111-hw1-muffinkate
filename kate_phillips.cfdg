@@ -1,0 +1,33 @@
+startshape FISH
+
+shape FISH
+{
+    TAIL [hue 330 sat 0.8 b 0.8]
+    BODY  [hue 0 sat 0.7 b 0.6]
+    FIN [hue 330 sat 0.8 b 0.8]
+    EYE []
+}
+
+shape BODY
+{
+    CIRCLE [ x 0.65]
+}
+
+shape TAIL
+{
+    TRIANGLE [r 44 h 330]
+    TRIANGLE [r 15 h 30]
+    TRIANGLE [r 30]
+}
+
+shape EYE
+{
+    CIRCLE [size 0.25 x 0.9 y 0.10 sat -1 b 1]
+    CIRCLE [size 0.15 x 0.9 y 0.1]
+    
+}
+
+shape FIN
+{
+    TRIANGLE [size 0.5 x 0.65 y 0.5]
+}
